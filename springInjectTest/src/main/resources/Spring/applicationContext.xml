@@ -13,4 +13,9 @@ http://www.springframework.org/schema/beans http://www.springframework.org/schem
 		<constructor-arg name="price" value="3000000" />
 	</bean>
 
+	<bean id="person" class="springInjectTest.Person">
+		<property name="name" value="Tom" />
+		<property name="car2" ref="car2" />
+	</bean>
+
 </beans>

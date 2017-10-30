@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import springInjectTest.Car2;
+import springInjectTest.Person;
 import springInjectTest.Car;
 
 public class MainIndex {
@@ -22,4 +23,12 @@ public class MainIndex {
 		System.out.println(car2.getName());
 	}
 	
+	
+	@Test
+	public void demo3() {
+		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Spring/applicationContext.xml");
+		Person person = (Person) applicationContext.getBean("person");
+		System.out.println(person.getCar2().getName());
+		System.out.println(person.getName());
+	}
 }
