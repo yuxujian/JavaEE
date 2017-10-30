@@ -13,6 +13,5 @@ public class MainIndex {
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Spring/applicationContext.xml");
 		Car car = (Car) applicationContext.getBean("car");
 		System.out.println(car.getName());
-		System.out.println("okok");
 	}
 }
