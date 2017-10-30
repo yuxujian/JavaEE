@@ -1,11 +1,16 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
 http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-	
+
 	<bean id="car" class="springInjectTest.Car">
-		<property name="name" value="Toyota"/>
-		<property name="price" value="100000"/>
+		<property name="name" value="Toyota" />
+		<property name="price" value="100000" />
+	</bean>
+
+	<bean id="car2" class="springInjectTest.Car2">
+		<constructor-arg name="name" value="BMW" />
+		<constructor-arg name="price" value="3000000" />
 	</bean>
 
 </beans>
