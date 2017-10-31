@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import springInjectTest.Car2;
+import springInjectTest.CollectionBean;
 import springInjectTest.Person;
 import springInjectTest.Car;
 
@@ -30,5 +31,15 @@ public class MainIndex {
 		Person person = (Person) applicationContext.getBean("person");
 		System.out.println(person.getCar2().getName());
 		System.out.println(person.getName());
+	}
+	
+	@Test
+	public void demo4() {
+		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Spring/applicationContext.xml");
+		CollectionBean collectionBean = (CollectionBean) applicationContext.getBean("collectionBean");
+		System.out.println(collectionBean.getList());
+		System.out.println(collectionBean.getMap());
+		System.out.println(collectionBean.getSet());
+		System.out.println(collectionBean.getProperties());
 	}
 }

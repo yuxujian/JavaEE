@@ -17,5 +17,39 @@ http://www.springframework.org/schema/beans http://www.springframework.org/schem
 		<property name="name" value="Tom" />
 		<property name="car2" ref="car2" />
 	</bean>
+	
+	<bean id="collectionBean" class="springInjectTest.CollectionBean">
+    <!--注入List集合-->
+    <property name="list">
+        <list>
+            <value>Tom</value>
+            <value>Jay</value>
+        </list>
+    </property>
+
+    <!--注入Set集合-->
+    <property name="set">
+        <set>
+            <value>xujian</value>
+            <value>jieping</value> 
+        </set>
+    </property>
+
+    <!--注入Map集合-->
+    <property name="map">
+        <map>
+            <entry key="AA" value="123" />
+            <entry key="BB" value="321" />
+        </map>
+    </property>
+
+    <!--注入Properties属性-->
+    <property name="properties">
+        <props>
+            <prop key="username">root</prop>
+            <prop key="password">123</prop> 
+        </props>
+    </property>
+</bean>
 
 </beans>
